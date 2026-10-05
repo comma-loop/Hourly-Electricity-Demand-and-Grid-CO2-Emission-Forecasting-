@@ -1,0 +1,2 @@
+h,Chronos_zero_shot,LSTM,LTSF_Linear,LightGBM_global,Persistence,RandomForest,Ridge,SeasonalNaive
+24,448.7701,398.1653,339.4744,282.5828,340.1211,277.9364,345.5418,505.9572

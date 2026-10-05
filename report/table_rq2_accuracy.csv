@@ -1,0 +1,7 @@
+model,accuracy_%,MASE
+RandomForest,95.77,0.591
+LightGBM_global,95.73,0.601
+Persistence,94.92,0.723
+LTSF_Linear,94.87,0.722
+Ridge,94.4,0.735
+SeasonalNaive,92.83,1.076

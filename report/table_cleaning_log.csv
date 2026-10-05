@@ -1,0 +1,9 @@
+﻿step,rows_before,rows_after,rows_removed,reason
+parse time,1626431,1626431,0,khong doc duoc timestamp
+drop duplicates,1626431,1626431,0,trung ba + thoi diem
+drop missing target,1626431,1392340,234091,demand thieu
+physical range (per BA),1392340,1389574,2766,"ngoai [0.1%, 99.9%] cua tung BA"
+drop negative demand,1389574,1389423,151,demand < 0 MW (loi du lieu vat ly)
+regularize hourly grid,1389423,1394063,-4640,"them dong moi (demand=NaN) cho khung gio bi thieu, de deu tan suat"
+"interpolate(limit=3, forward) + drop long gaps",1394063,1391895,2168,khoang trong dai hon 3 buoc bi bo
+drop short units,1391895,1391895,0,0 BA thieu du lieu
