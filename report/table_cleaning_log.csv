@@ -1,9 +1,6 @@
-﻿step,rows_before,rows_after,rows_removed,reason
-parse time,1626431,1626431,0,khong doc duoc timestamp
-drop duplicates,1626431,1626431,0,trung ba + thoi diem
-drop missing target,1626431,1392340,234091,demand thieu
-physical range (per BA),1392340,1389574,2766,"ngoai [0.1%, 99.9%] cua tung BA"
-drop negative demand,1389574,1389423,151,demand < 0 MW (loi du lieu vat ly)
-regularize hourly grid,1389423,1394063,-4640,"them dong moi (demand=NaN) cho khung gio bi thieu, de deu tan suat"
-"interpolate(limit=3, forward) + drop long gaps",1394063,1391895,2168,khoang trong dai hon 3 buoc bi bo
-drop short units,1391895,1391895,0,0 BA thieu du lieu
+Step,Rows_Before,Rows_After,Rows_Changed,Note
+rows read for eight BAs (before de-duplication),210432,210432,0,starting point
+"collapse duplicate (BA, timestamp) keys",210432,210432,0,0 duplicated keys; 0 with conflicting values (mean used)
+non-positive demand set to missing,210432,210432,6,physical impossibility; 151 values were already missing/non-numeric
+implausible demand set to missing (train-median screen),210432,210432,87,< 0.3x or > 3.0x per-BA training median; rows listed in report/flagged_implausible_demand.csv
+complete hourly grid (missing hours kept as missing),210432,210440,8,rows added for hours absent from the source; demand stays NaN

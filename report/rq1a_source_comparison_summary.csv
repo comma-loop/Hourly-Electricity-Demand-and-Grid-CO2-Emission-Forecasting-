@@ -1,2 +1,0 @@
-﻿primary_range_start,primary_range_end,secondary_range_start,secondary_range_end,overlap_start,overlap_end,update_lag_days_primary_minus_secondary,pct_timesteps_primary_only,pct_timesteps_secondary_only,n_ba_primary,n_ba_secondary,n_common_ba
-2022-01-01 06:00:00,2025-01-01 08:00:00,2022-01-01 06:00:00,2025-01-01 08:00:00,2022-01-01 06:00:00,2025-01-01 08:00:00,0,0.0,0.011,63,8,8

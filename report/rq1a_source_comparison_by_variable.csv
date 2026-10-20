@@ -1,4 +1,0 @@
-﻿variable,n_matched,corr,bias,mae,rmse,mape_pct
-Demand,210281.0,0.9999999999999999,0.0,0.0,0.0,0.0
-Net Generation,210282.0,1.0000000000000002,0.0,0.0,0.0,0.0
-Total Interchange,208004.0,1.0000000000000002,0.0,0.0,0.0,0.0
